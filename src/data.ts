@@ -59,7 +59,7 @@ export const createSampleResume = (): ResumeData => ({
     headline: "求职方向 / 职位名称",
     age: "",
     gender: "",
-    phone: "138 0000 0000",
+    phone: "",
     email: "name@example.com",
     origin: "",
     location: "所在城市",
