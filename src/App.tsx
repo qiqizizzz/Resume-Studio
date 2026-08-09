@@ -26,6 +26,7 @@ import {
   Plus,
   Save,
   SlidersHorizontal,
+  Star,
   Type,
   Trash2,
   X,
@@ -649,6 +650,7 @@ const App = () => {
           </div>
         </div>
         <div className="header-actions">
+          <a className="github-star-command" href="https://github.com/qiqizizzz/Resume-Studio" target="_blank" rel="noreferrer" aria-label="打开 GitHub 项目并支持 Star"><SiGithub size={15} /><Star className="github-star-command__star" size={14} fill="currentColor" /><span>Star 项目</span></a>
           <span className="save-state"><Save size={15} />{saveState}</span>
           <button className="secondary-command" type="button" onClick={importData}><FileUp size={16} />导入数据</button>
           <button className="secondary-command" type="button" onClick={backup}><Save size={16} />备份数据</button>

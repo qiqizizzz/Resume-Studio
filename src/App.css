@@ -10,6 +10,9 @@
 .app-brand small { margin-left: 4px; color: #a8c0cf; font-size: 12px; font-weight: 500; }
 .header-actions { gap: 10px; }
 .save-state { gap: 5px; color: #c8d7df; font-size: 12px; }
+.github-star-command { min-height: 32px; padding: 0 10px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid #4c7188; border-radius: 5px; color: #eef8fb; background: #224d68; font-size: 12px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.github-star-command:hover { border-color: #74a2b8; background: #2b5d7a; }
+.github-star-command__star { color: #f6c453; }
 .primary-command, .secondary-command, .add-section { border: 0; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 32px; padding: 0 12px; font-weight: 700; font-size: 13px; }
 .primary-command { color: #fff; background: #0aab92; }
 .primary-command:hover { background: #078c78; }
