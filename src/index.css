@@ -1,0 +1,12 @@
+:root {
+  font-family: Inter, "Microsoft YaHei", "PingFang SC", sans-serif;
+  color: #1e2c35;
+  background: #eef2f4;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 1024px; min-height: 100vh; margin: 0; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: 0.55; }
