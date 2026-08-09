@@ -12,6 +12,10 @@ Resume Studio 是一个本地优先的多页 A4 简历编辑器，将结构化�
 
 **[打开在线版](https://qiqizizzz.github.io/Resume-Studio/)** · **[查看 GitHub 仓库](https://github.com/qiqizizzz/Resume-Studio)**
 
+<p align="center">
+  <img src="docs/assets/resume-studio-preview.png" alt="Resume Studio 编辑器与实时简历预览" width="900" />
+</p>
+
 ## 功能
 
 Resume Studio 主要提供以下核心能力：

@@ -12,6 +12,10 @@ Resume Studio is a local-first resume editor for creating polished, multi-page A
 
 **[Open the live demo](https://qiqizizzz.github.io/Resume-Studio/)** · **[View the source code](https://github.com/qiqizizzz/Resume-Studio)**
 
+<p align="center">
+  <img src="docs/assets/resume-studio-preview.png" alt="Resume Studio editor and live resume preview" width="900" />
+</p>
+
 ## Features
 
 Resume Studio focuses on the following core capabilities:
