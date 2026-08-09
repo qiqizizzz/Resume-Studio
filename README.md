@@ -29,6 +29,12 @@ Resume Studio focuses on the following core capabilities:
 
 ## Getting Started
 
+### Option 1: Use the online app
+
+Open the [live demo](https://qiqizizzz.github.io/Resume-Studio/) in a browser. No installation is required. Resume data stays in that browser's local storage.
+
+### Option 2: Run it locally
+
 Node.js 20 or newer is recommended.
 
 ```bash
@@ -38,7 +44,7 @@ npm run dev
 
 The development command starts the Vite server and the Electron window together.
 
-Run the checks separately when needed:
+Run the build and lint checks separately when needed:
 
 ```bash
 npm run build

@@ -29,6 +29,12 @@ Resume Studio 主要提供以下核心能力：
 
 ## 开始使用
 
+### 方法一：直接使用在线版
+
+直接打开[在线版](https://qiqizizzz.github.io/Resume-Studio/)，无需安装任何软件。简历数据会保存在当前浏览器的本地存储中。
+
+### 方法二：部署到本地
+
 建议使用 Node.js 20 或更高版本。
 
 ```bash
@@ -38,7 +44,7 @@ npm run dev
 
 开发命令会同时启动 Vite 服务和 Electron 窗口。
 
-执行构建和代码检查：
+需要时可以执行构建和代码检查：
 
 ```bash
 npm run build
