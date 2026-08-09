@@ -14,16 +14,18 @@ Resume Studio is a local-first resume editor for creating polished, multi-page A
 
 ## Features
 
-- Live A4 preview with automatic pagination for long resumes
-- Sections for profile, education, skills, work, projects, and custom content
-- Drag-and-drop section ordering and entry ordering
-- Visibility controls for sections and profile fields
-- Markdown editing with GFM rendering, lists, bold text, and blank lines
-- Content-aware editor height for experience descriptions
-- Font, scale, color, spacing, and page margin controls
-- Avatar selection and custom contact links with official icons
-- JSON backup and import
-- Native PDF export in the Electron app and browser print-to-PDF fallback
+Resume Studio focuses on the following core capabilities:
+
+| Feature | Description |
+| --- | --- |
+| 1. Live A4 Preview | The resume is rendered on A4 pages as you edit, with automatic pagination when content becomes longer. |
+| 2. Structured Resume Sections | Profile, education, skills, work, projects, and custom sections can be edited in one workspace. |
+| 3. Flexible Layout Control | Drag sections and entries into a different order, and hide optional fields when they are not needed. |
+| 4. Markdown Content | Write experience descriptions with Markdown and GFM features such as lists, bold text, and blank lines. |
+| 5. Visual Customization | Adjust fonts, font scale, colors, spacing, page margins, section styles, and avatar presentation. |
+| 6. Local-first Privacy | Resume data stays in the desktop app's local storage or the browser's `localStorage`; no resume backend is required. |
+| 7. Backup and Import | Export resume data as JSON and restore it later on the same or another device. |
+| 8. PDF Export | Use native PDF export in Electron or print the browser preview to a PDF file. |
 
 ## Getting Started
 
