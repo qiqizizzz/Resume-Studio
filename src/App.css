@@ -10,10 +10,6 @@
 .app-brand small { margin-left: 4px; color: #a8c0cf; font-size: 12px; font-weight: 500; }
 .header-actions { gap: 10px; }
 .save-state { gap: 5px; color: #c8d7df; font-size: 12px; }
-.header-actions .secondary-command { color: #eaf5f8; background: #224d68; border-color: #4c7188; }
-.header-actions .secondary-command:hover { color: #fff; background: #2b5d7a; border-color: #74a2b8; }
-.header-actions .primary-command { color: #fff; background: #0aab92; }
-.header-actions .primary-command:hover { background: #078c78; }
 .language-command { min-height: 32px; padding: 0 10px; border: 1px solid #4c7188; border-radius: 5px; color: #eaf5f8; background: transparent; font-size: 12px; font-weight: 700; white-space: nowrap; }
 .language-command:hover { border-color: #74a2b8; background: #2b5d7a; }
 .github-star-command { min-height: 32px; padding: 0 10px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid #4c7188; border-radius: 5px; color: #eef8fb; background: #224d68; font-size: 12px; font-weight: 700; text-decoration: none; white-space: nowrap; }
@@ -121,8 +117,13 @@
 .markdown-editor .w-md-editor-text-input { height: 100%; overflow: hidden !important; }
 .markdown-editor .w-md-editor-text-pre, .markdown-editor .w-md-editor-text-input, .markdown-editor .w-md-editor-text { font-size: 12px; line-height: 1.65; }
 .preview-panel { min-width: 0; min-height: 0; display: flex; flex-direction: column; background: #fff; }
-.preview-panel__header { height: 62px; padding: 0 23px; flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #cedadd; background: #f8fafb; }
+.preview-panel__header { height: 62px; padding: 0 23px; flex: 0 0 auto; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #cedadd; background: #f8fafb; }
 .preview-panel__header strong { display: block; margin-top: 2px; color: #244452; font-size: 15px; }
+.preview-panel__actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.preview-panel__actions .secondary-command { color: #234359; background: #fff; border-color: #c8d8de; }
+.preview-panel__actions .secondary-command:hover { color: #18394e; background: #f4f8f9; border-color: #9fb8c2; }
+.preview-panel__actions .primary-command { color: #fff; background: #0aab92; }
+.preview-panel__actions .primary-command:hover { background: #078c78; }
 .preview-status { padding: 4px 8px; border-radius: 3px; color: #087d72; background: #dff7f0; font-size: 11px; font-weight: 700; }
 .preview-error { margin: 8px auto 0; color: #a84141; font-size: 12px; }
 .preview-scroll { min-height: 0; flex: 1; overflow: auto; padding: 22px; background: #fff; }

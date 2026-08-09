@@ -404,7 +404,7 @@ const ResumeDocument = memo(({ resume, copy }: { resume: ResumeData; copy: UiCop
   );
 });
 
-const ResumePreview = ({ resume, sourceRef, copy }: { resume: ResumeData; sourceRef: RefObject<HTMLDivElement | null>; copy: UiCopy }) => {
+const ResumePreview = ({ resume, sourceRef, copy, onImport, onBackup, onExport }: { resume: ResumeData; sourceRef: RefObject<HTMLDivElement | null>; copy: UiCopy; onImport: () => void; onBackup: () => void; onExport: () => void }) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const [isRendering, setIsRendering] = useState(true);
   const [error, setError] = useState("");
@@ -478,6 +478,11 @@ const ResumePreview = ({ resume, sourceRef, copy }: { resume: ResumeData; source
     <section className="preview-panel" style={previewStyle} aria-label={copy.preview.aria}>
       <div className="preview-panel__header">
         <div><span className="eyebrow">{copy.preview.eyebrow}</span><strong>{copy.preview.title}</strong></div>
+        <div className="preview-panel__actions">
+          <button className="secondary-command" type="button" onClick={onImport}><FileUp size={16} />{copy.actions.import}</button>
+          <button className="secondary-command" type="button" onClick={onBackup}><Save size={16} />{copy.actions.backup}</button>
+          <button className="primary-command" type="button" onClick={onExport}><Download size={17} />{copy.actions.export}</button>
+        </div>
         <span className="preview-status">{isRendering ? copy.preview.rendering : copy.preview.synced}</span>
       </div>
       {error && <p className="preview-error">{copy.preview.error}</p>}
@@ -712,9 +717,6 @@ const App = () => {
           <span className="save-state"><Save size={15} />{copy.save[saveState]}</span>
           <button className="language-command" type="button" onClick={() => setLanguage((current) => current === "zh" ? "en" : "zh")} title={copy.switchLanguage} aria-label={copy.switchLanguage}>{copy.languageButton}</button>
           <a className="github-star-command" href="https://github.com/qiqizizzz/Resume-Studio" target="_blank" rel="noreferrer" aria-label={copy.actions.starAria}><SiGithub size={15} /><Star className="github-star-command__star" size={14} fill="currentColor" /><span>{copy.actions.star}</span></a>
-          <button className="secondary-command" type="button" onClick={importData}><FileUp size={16} />{copy.actions.import}</button>
-          <button className="secondary-command" type="button" onClick={backup}><Save size={16} />{copy.actions.backup}</button>
-          <button className="primary-command" type="button" onClick={exportPdf}><Download size={17} />{copy.actions.export}</button>
           <input ref={importInputRef} className="visually-hidden-input" type="file" accept=".json,application/json" onChange={(event) => { void handleImportFile(event.target.files?.[0]); event.target.value = ""; }} />
         </div>
       </header>
@@ -779,7 +781,7 @@ const App = () => {
             </>
           ) : null}
         </section>
-        <ResumePreview resume={previewResume} sourceRef={sourceRef} copy={copy} />
+        <ResumePreview resume={previewResume} sourceRef={sourceRef} copy={copy} onImport={importData} onBackup={backup} onExport={exportPdf} />
       </main>
       <div ref={sourceRef} className="print-source"><ResumeDocument resume={previewResume} copy={copy} /></div>
     </div>
