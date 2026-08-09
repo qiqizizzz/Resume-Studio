@@ -1,84 +1,62 @@
 # Resume Studio
 
-Resume Studio 是一个本地优先的多页 A4 简历编辑器。它把内容编辑、模块排序、Markdown 描述和 PDF 输出放在同一个工作区中，适合在电脑上反复调整简历版式。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-- [在线使用](https://qiqizizzz.github.io/Resume-Studio/)
-- [GitHub 仓库](https://github.com/qiqizizzz/Resume-Studio)
+[![GitHub Stars](https://img.shields.io/github/stars/qiqizizzz/Resume-Studio?style=flat-square)](https://github.com/qiqizizzz/Resume-Studio/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/qiqizizzz/Resume-Studio?style=flat-square)](https://github.com/qiqizizzz/Resume-Studio/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/qiqizizzz/Resume-Studio?style=flat-square)](https://github.com/qiqizizzz/Resume-Studio/issues)
+[![License](https://img.shields.io/github/license/qiqizizzz/Resume-Studio?style=flat-square)](LICENSE)
+[![Deploy to GitHub Pages](https://github.com/qiqizizzz/Resume-Studio/actions/workflows/deploy.yml/badge.svg)](https://github.com/qiqizizzz/Resume-Studio/actions/workflows/deploy.yml)
 
-## 功能
+Resume Studio is a local-first resume editor for creating polished, multi-page A4 resumes. It combines structured sections, Markdown content, live pagination, visual controls, and PDF export in one workspace.
 
-- A4 纸张实时预览，内容较长时自动分页
-- 基本信息、教育、技能、工作、项目和自定义模块
-- 拖动调整模块顺序，也可以调整模块内的经历条目顺序
-- 控制模块和个人信息的显示与隐藏
-- Markdown 编辑与 GFM 渲染，支持列表、加粗和连续空行
-- 经历描述按内容自动调整编辑区高度
-- 字体、字号比例、模块颜色、副标题颜色、加粗颜色和页面边距设置
-- 头像选择、自定义网站信息和官方图标
-- JSON 数据备份与导入
-- Electron 桌面版原生导出 PDF，浏览器版使用系统打印保存 PDF
+**[Open the live demo](https://qiqizizzz.github.io/Resume-Studio/)** · **[View the source code](https://github.com/qiqizizzz/Resume-Studio)**
 
-## 运行
+## Features
 
-### 桌面开发版
+- Live A4 preview with automatic pagination for long resumes
+- Sections for profile, education, skills, work, projects, and custom content
+- Drag-and-drop section ordering and entry ordering
+- Visibility controls for sections and profile fields
+- Markdown editing with GFM rendering, lists, bold text, and blank lines
+- Content-aware editor height for experience descriptions
+- Font, scale, color, spacing, and page margin controls
+- Avatar selection and custom contact links with official icons
+- JSON backup and import
+- Native PDF export in the Electron app and browser print-to-PDF fallback
 
-需要 Node.js 20 或更高版本。
+## Getting Started
+
+Node.js 20 or newer is recommended.
 
 ```bash
 npm install
 npm run dev
 ```
 
-`npm run dev` 会启动 Vite 开发服务和 Electron 窗口。
+The development command starts the Vite server and the Electron window together.
 
-### 构建检查
+Run the checks separately when needed:
 
 ```bash
 npm run build
 npm run lint
 ```
 
-### 打包 Windows
+Create a Windows installer with:
 
 ```bash
 npm run dist:win
 ```
 
-安装包会生成在 `release/` 目录。
+The installer is written to `release/`.
 
-## 在线版
+## Data and Export
 
-项目通过 GitHub Pages 发布，不需要购买域名或服务器。在线版是纯静态前端应用：
+Resume content is stored locally. The desktop app uses Electron's local application data directory, while the browser build uses `localStorage`. No resume content is uploaded to a project server.
 
-- 简历内容只保存在当前浏览器的本地存储中，不会上传到项目服务器
-- 不同访问者之间不会共享编辑内容
-- 浏览器导出 PDF 时，在打印对话框中选择“另存为 PDF”
-- Electron 桌面版拥有原生文件选择和 PDF 导出能力
+For the browser build, choose **Save to PDF** in the browser print dialog. The Electron build uses its native PDF export flow.
 
-仓库中的 `.github/workflows/deploy.yml` 会在 `main` 分支更新后自动构建并发布。若要在自己的仓库使用 Pages：
+## License
 
-1. 将项目推送到 GitHub 的 `main` 分支
-2. 打开仓库 `Settings` → `Pages`
-3. 将 `Source` 设置为 `GitHub Actions`
-4. 在 `Actions` 中等待 `Deploy to GitHub Pages` 完成
-
-## 技术栈
-
-- React + TypeScript + Vite
-- Electron
-- Paged.js
-- `@uiw/react-md-editor`、`react-markdown`、`remark-gfm`
-- `@dnd-kit`、`lucide-react`、Simple Icons
-
-## 目录说明
-
-```text
-src/                 编辑器界面、简历渲染和默认数据
-electron/            Electron 主进程与预加载脚本
-public/              静态图标资源
-.github/workflows/   GitHub Pages 自动部署流程
-```
-
-## 许可证
-
-本项目使用 [MIT License](./LICENSE)。第三方依赖和图标资源仍遵循各自的许可证。
+Resume Studio is released under the [MIT License](LICENSE). Third-party packages and icon sets retain their own licenses.

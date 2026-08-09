@@ -1,0 +1,62 @@
+# Resume Studio
+
+[English](README.md) | 简体中文
+
+[![GitHub Stars](https://img.shields.io/github/stars/qiqizizzz/Resume-Studio?style=flat-square)](https://github.com/qiqizizzz/Resume-Studio/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/qiqizizzz/Resume-Studio?style=flat-square)](https://github.com/qiqizizzz/Resume-Studio/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/qiqizizzz/Resume-Studio?style=flat-square)](https://github.com/qiqizizzz/Resume-Studio/issues)
+[![License](https://img.shields.io/github/license/qiqizizzz/Resume-Studio?style=flat-square)](LICENSE)
+[![Deploy to GitHub Pages](https://github.com/qiqizizzz/Resume-Studio/actions/workflows/deploy.yml/badge.svg)](https://github.com/qiqizizzz/Resume-Studio/actions/workflows/deploy.yml)
+
+Resume Studio 是一个本地优先的多页 A4 简历编辑器，将结构化模块、Markdown 内容、实时分页、样式调整和 PDF 导出集中在一个工作区中。
+
+**[打开在线版](https://qiqizizzz.github.io/Resume-Studio/)** · **[查看 GitHub 仓库](https://github.com/qiqizizzz/Resume-Studio)**
+
+## 功能
+
+- A4 实时预览，内容较长时自动分页
+- 基本信息、教育、技能、工作、项目和自定义模块
+- 拖动调整模块顺序和经历条目顺序
+- 模块和个人信息显示/隐藏控制
+- Markdown 编辑与 GFM 渲染，支持列表、加粗和空行
+- 经历描述编辑区根据内容自动调整高度
+- 字体、字号比例、颜色、间距和页面边距设置
+- 头像选择、自定义联系信息和官方图标
+- JSON 数据备份与导入
+- Electron 桌面版原生导出 PDF，浏览器版支持打印为 PDF
+
+## 开始使用
+
+建议使用 Node.js 20 或更高版本。
+
+```bash
+npm install
+npm run dev
+```
+
+开发命令会同时启动 Vite 服务和 Electron 窗口。
+
+执行构建和代码检查：
+
+```bash
+npm run build
+npm run lint
+```
+
+打包 Windows 安装程序：
+
+```bash
+npm run dist:win
+```
+
+安装包会生成在 `release/` 目录。
+
+## 数据与导出
+
+简历内容默认保存在本地。桌面版使用 Electron 本地应用数据目录，浏览器版使用 `localStorage`，不会把简历内容上传到项目服务器。
+
+浏览器版导出时，请在系统打印窗口选择“另存为 PDF”；Electron 桌面版使用原生 PDF 导出流程。
+
+## 许可证
+
+本项目使用 [MIT License](LICENSE)。第三方依赖和图标资源仍遵循各自的许可证。
